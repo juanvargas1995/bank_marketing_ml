@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Home page</title>
+  </head>
+  <body>
+    <script >
+    </script>
+
+    <h1>Bank Marketing</h1>
+    <form action="{% url 'result' %}">
+      {% csrf_token %}
+    <table align="center">
+        <tr>
+            <td>Enter age</td>
+            <td><input type="number" name="age"/></td>
+        </tr>
+        <tr>
+            <td>Enter job</td>
+            <td><select name="job" id="job">
+        <option value="housemaid">Housemaid</option>
+        <option value="services">Services</option>
+        <option value="admin.">Admin</option>
+        <option value="blue-collar">Blue Collar</option>
+        <option value="technician">Technician</option>
+        <option value="retired">Retired</option>
+        <option value="management">Management</option>
+        <option value="unemployed">Unemployed</option>
+        <option value="self-employed">Self-employed</option>
+        <option value="unknown">Unknown</option>
+        <option value="entrepreneur">Entrepreneur</option>
+        <option value="student">Student</option>
+      </select></td>
+        </tr>
+        <tr>
+            <td>Enter marital status</td>
+            <td><select name="marital" id="marital">
+        <option value="single">Single</option>
+        <option value="married">Married</option>
+        <option value="divorced">Divorced</option>
+        <option value="unknown">Unknown</option>
+      </select></td>
+        </tr>
+        <tr>
+            <td>Enter education</td>
+            <td><select name="education" id="education">
+        <option value="basic.4y">Housemaid</option>
+        <option value="basic.6y">Services</option>
+        <option value="basic.9y">Admin</option>
+        <option value="high.school">Blue Collar</option>
+        <option value="illiterate">Technician</option>
+        <option value="professional.course">Retired</option>
+        <option value="university.degree">Management</option>
+        <option value="unknown">Unemployed</option>
+      </select></td>
+        </tr>
+        <tr>
+            <td>Enter default</td>
+            <td><select name="default" id="default">
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+        <option value="unknown">Unknown</option>
+      </select></td>
+        </tr>
+        <tr>
+            <td>Enter housing</td>
+            <td><select name="housing" id="housing">
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+        <option value="unknown">Unknown</option>
+      </select></td>
+        </tr>
+        <tr>
+            <td>Enter loan</td>
+            <td><select name="loan" id="loan">
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+        <option value="unknown">Unknown</option>
+      </select></td>
+        </tr>
+        <tr>
+            <td>Enter contact</td>
+            <td><select name="contact" id="contact">
+        <option value="cellular">Cellular</option>
+        <option value="telephone">Telephone</option>
+      </select></td>
+        </tr>
+        <tr>
+            <td>Enter day</td>
+            <td><input type="text" name="day"/></td>
+        </tr>
+        <tr>
+            <td>Enter month</td>
+            <td><input type="text" name="month"/></td>
+        </tr>
+        <tr>
+            <td>Enter duration</td>
+            <td><input type="number" name="duration"/></td>
+        </tr>
+        <tr>
+            <td>Enter campaign</td>
+            <td><input type="number" name="campaign"/></td>
+        </tr>
+        <tr>
+            <td>Enter pdays</td>
+            <td><input type="number" name="pdays"/></td>
+        </tr>
+        <tr>
+            <td>Enter previous</td>
+            <td><input type="number" name="previous"/></td>
+        </tr>
+        <tr>
+            <td>Enter previous outcome</td>
+            <td><input type="text" name="poutcome"</td>
+        </tr>
+        <tr>
+            <td>Enter emp var rate</td>
+            <td><input type="number" step="any" name="evr"</td>
+        </tr>
+        <tr>
+            <td>Enter cons price idx</td>
+            <td><input type="number" step="any" name="cci"</td>
+        </tr>
+        <tr>
+            <td>Enter cons conf idx</td>
+            <td><input type="number" step="any" name="cpi"</td>
+        </tr>
+        <tr>
+            <td>Enter e3mr</td>
+            <td><input type="number" step="any" name="e3mr"</td>
+        </tr>
+        <tr>
+            <td>Enter number of employees</td>
+            <td><input type="number" step="any" name="numemp"</td>
+        </tr>
+        <tr>
+            <td>
+                <input type="submit" value='Get Predictions'>
+                <div id="jquery_result"></div>
+            </td>
+        </tr>
+    </table>
+    </form>
+  </body>
+</html>
